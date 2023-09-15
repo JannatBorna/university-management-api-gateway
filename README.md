@@ -13,3 +13,11 @@
 ```bash
   yarn run dev
 ```
+
+### CORE service and AUTH service এর মধ্যে connection জন্য shared/axios.ts মধ্যে code করা হয়েছে
+
+- axios install করতে হবে
+
+```bash
+  yarn add axios
+```
