@@ -31,8 +31,7 @@ const HttpService = (baseUrl: string): AxiosInstance => {
   return instance;
 };
 
-// auth and core service er modhe link torie(tar age config/index.ts add kore then ey khne kaj korbo)
-const authService = HttpService(config.authServiceUrl);
-const coreService = HttpService(config.coreServiceUrl);
+const AuthService = HttpService(config.authServiceUrl);
+const CoreService = HttpService(config.coreServiceUrl);
 
-export { HttpService, authService, coreService };
+export { HttpService, AuthService, CoreService };
