@@ -10,6 +10,6 @@
 - Offered Course Section (core) ✅
 - Offered Course Class Schedule (core) ✅
 - Semester Registration (core)✅
-- Student Enrolled Course (core)
-- Student Enrolled Course Mark (core)
-- Semester Payment (core)
+- Student Enrolled Course (core)✅
+- Student Enrolled Course Mark (core)✅
+- Semester Payment (core)✅
