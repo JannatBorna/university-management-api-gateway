@@ -3,30 +3,35 @@ import { academicSemesterRouters } from '../modules/academicSemester/academicSem
 import { academicFacultyRouters } from '../modules/academicFaculty/academicFaculty.router';
 import { academicDepartmentRouters } from '../modules/academicDepartment/academicDepartment.router';
 import { buildingRoutes } from '../modules/building/building.router';
+import { roomRoutes } from '../modules/room/room.router';
 
 const router = express.Router();
 
 const moduleRoutes = [
   {
     path: '/academic-faculties',
-    route: academicFacultyRouters
+    routes: academicFacultyRouters
   },
   {
     path: '/academic-departments',
-    route: academicDepartmentRouters
+    routes: academicDepartmentRouters
   },
   {
     path: '/academic-semesters',
-    route: academicSemesterRouters
+    routes: academicSemesterRouters
   },
   {
     path: '/buildings',
-    route: buildingRoutes
+    routes: buildingRoutes
+  },
+  {
+    path: '/rooms',
+    routes: roomRoutes
   }
 ];
 
 moduleRoutes.forEach((route) => {
-  router.use(route.path, route.route);
+  router.use(route.path, route.routes);
 });
 
 export default router;

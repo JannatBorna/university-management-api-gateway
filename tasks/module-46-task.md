@@ -4,7 +4,7 @@
 - Academic Department ( auth and core )
 - Academic Faculty ( auth and core )
 - Building ( core ) ✅
-- Room ( core )
+- Room ( core ) ✅
 - Course (core )
 - Offered Course (core )
 - Offered Course Class Schedule (core )
