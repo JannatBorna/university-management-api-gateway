@@ -3,7 +3,7 @@
 - Academic Semester ( auth and core )
 - Academic Department ( auth and core )
 - Academic Faculty ( auth and core )
-- Building ( core )
+- Building ( core ) ✅
 - Room ( core )
 - Course (core )
 - Offered Course (core )
