@@ -1,12 +1,12 @@
 # Task
 
-- Academic Semester ( auth and core )
-- Academic Department ( auth and core )
-- Academic Faculty ( auth and core )
+- Academic Semester ( auth❌ and core✅ )
+- Academic Department ( auth❌ and core✅ )
+- Academic Faculty ( auth❌ and core✅ )
 - Building ( core ) ✅
 - Room ( core ) ✅
 - Course (core ) ✅
-- Offered Course (core )
+- Offered Course (core )✅
 - Offered Course Class Schedule (core )
 - Offered Course Section (core )
 - Semester Registration (core )
