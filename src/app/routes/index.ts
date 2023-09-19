@@ -1,4 +1,5 @@
 import express from 'express';
+import { userRoutes } from '../modules/User/user.routes';
 import { academicSemesterRouters } from '../modules/academicSemester/academicSemester.routes';
 import { academicFacultyRouters } from '../modules/academicFaculty/academicFaculty.router';
 import { academicDepartmentRouters } from '../modules/academicDepartment/academicDepartment.router';
@@ -12,7 +13,6 @@ import { offeredCourseSectionRoutes } from '../modules/offeredCourseSection/offe
 import { studentEnrolledCourseRoutes } from '../modules/studentEnrolledCourse/studentEnrolledCourse.routes';
 import { studentEnrolledCourseMarkRoutes } from '../modules/studentEnrolledCourseMark/studentEnrolledCourseMark.routes';
 import { studentSemesterPaymentRoutes } from '../modules/studentSemesterPayment/studentSemesterPayment.routes';
-import { userRoutes } from '../modules/User/user.routes';
 
 const router = express.Router();
 
