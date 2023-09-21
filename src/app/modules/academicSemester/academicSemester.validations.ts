@@ -17,10 +17,10 @@ const create = z.object({
       required_error: 'Code is required'
     }),
     startMonth: z.enum([...academicSemesterMonths] as [string, ...string[]], {
-      required_error: 'Start Month is required'
+      required_error: 'Start month is required'
     }),
     endMonth: z.enum([...academicSemesterMonths] as [string, ...string[]], {
-      required_error: 'End Month is required'
+      required_error: 'End month is required'
     })
   })
 });

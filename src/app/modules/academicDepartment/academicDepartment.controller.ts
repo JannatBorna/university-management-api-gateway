@@ -1,18 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
-import { AcademicDepartmentService } from './academicDepartment.service';
 import sendResponse from '../../../shared/response';
+import { AcademicDepartmentService } from './academicDepartment.service';
 
-//create
-const insertIntoDB = async (req: Request, res: Response, next: NextFunction) => {
-  try {
-    const result = await AcademicDepartmentService.insertIntoDB(req);
-    sendResponse(res, result);
-  } catch (error) {
-    next(error);
-  }
-};
-
-// all data fetch
 const getAllFromDB = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const result = await AcademicDepartmentService.getAllFromDB(req);
@@ -22,7 +11,15 @@ const getAllFromDB = async (req: Request, res: Response, next: NextFunction) => 
   }
 };
 
-//signgle data fetch
+const insertIntoDB = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const result = await AcademicDepartmentService.insertIntoDB(req);
+    sendResponse(res, result);
+  } catch (error) {
+    next(error);
+  }
+};
+
 const getByIdFromDB = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const result = await AcademicDepartmentService.getByIdFromDB(req);
@@ -32,7 +29,6 @@ const getByIdFromDB = async (req: Request, res: Response, next: NextFunction) =>
   }
 };
 
-//update
 const updateOneInDB = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const result = await AcademicDepartmentService.updateOneInDB(req);
@@ -42,7 +38,6 @@ const updateOneInDB = async (req: Request, res: Response, next: NextFunction) =>
   }
 };
 
-//delete
 const deleteByIdFromDB = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const result = await AcademicDepartmentService.deleteByIdFromDB(req);
@@ -53,9 +48,9 @@ const deleteByIdFromDB = async (req: Request, res: Response, next: NextFunction)
 };
 
 export const AcademicDepartmentController = {
-  insertIntoDB,
   getAllFromDB,
   getByIdFromDB,
   updateOneInDB,
-  deleteByIdFromDB
+  deleteByIdFromDB,
+  insertIntoDB
 };

@@ -1,11 +1,12 @@
 import express from 'express';
-import { AcademicSemesterController } from './academicSemester.comtroller';
+import { ENUM_USER_ROLE } from '../../../enums/user';
 import validateRequest from '../../middlewares/validateRequest';
+import { AcademicSemesterController } from './academicSemester.controller';
 import { AcademicSemesterValidation } from './academicSemester.validations';
 import auth from '../../middlewares/auth';
-import { ENUM_USER_ROLE } from '../../../enums/user';
 
 const router = express.Router();
+
 router.get('/', AcademicSemesterController.getAllFromDB);
 router.get('/:id', AcademicSemesterController.getByIdFromDB);
 
@@ -29,4 +30,4 @@ router.delete(
   AcademicSemesterController.deleteByIdFromDB
 );
 
-export const academicSemesterRouters = router;
+export const academicSemesterRoutes = router;

@@ -1,11 +1,12 @@
 import express from 'express';
-import auth from '../../middlewares/auth';
 import { ENUM_USER_ROLE } from '../../../enums/user';
+import validateRequest from '../../middlewares/validateRequest';
+import auth from '../../middlewares/auth';
 import { AcademicDepartmentController } from './academicDepartment.controller';
 import { AcademicDepartmentValidation } from './academicDepartment.validation';
-import validateRequest from '../../middlewares/validateRequest';
 
 const router = express.Router();
+
 router.get('/', AcademicDepartmentController.getAllFromDB);
 router.get('/:id', AcademicDepartmentController.getByIdFromDB);
 
@@ -29,4 +30,4 @@ router.delete(
   AcademicDepartmentController.deleteByIdFromDB
 );
 
-export const academicDepartmentRouters = router;
+export const academicDepartmentRoutes = router;
