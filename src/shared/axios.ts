@@ -4,7 +4,7 @@ import config from '../config';
 const HttpService = (baseUrl: string): AxiosInstance => {
   const instance = axios.create({
     baseURL: baseUrl,
-    timeout: 10000,
+    timeout: 100000,
     headers: {
       'Content-Type': 'application/json'
     }

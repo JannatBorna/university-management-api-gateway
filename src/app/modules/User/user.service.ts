@@ -7,7 +7,7 @@ import { IGenericResponse } from '../../../interfaces/common';
 const createStudent = async (req: Request) => {
   const file = req.file as IUploadFile;
   const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
-  console.log('Request data', req.body);
+  // console.log('Request data', req.body);
   if (uploadedImage) {
     req.body.profileImage = uploadedImage.secure_url;
   }
@@ -42,15 +42,16 @@ const createStudent = async (req: Request) => {
   // console.log('Faculty:', academicFacultyResponse);
   // console.log('Semester:', academicSemesterResponse);
 
-  console.log('Body:', req.body);
+  // console.log('Body:', req.body);
 
-  // const response: IGenericResponse = await AuthService.post('/users/create-student', req.body, {
-  // headers: {
-  // Authorization: req.headers.authorization
-  // }
-  // });
+  // student create hobe auth service a
+  const response: IGenericResponse = await AuthService.post('/users/create-student', req.body, {
+    headers: {
+      Authorization: req.headers.authorization
+    }
+  });
 
-  // return response;
+  return response;
 };
 
 export const UserService = {
