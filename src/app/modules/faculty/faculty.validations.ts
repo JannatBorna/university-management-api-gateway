@@ -2,13 +2,11 @@ import { z } from 'zod';
 
 const updateFaculty = z.object({
   body: z.object({
-    name: z
-      .object({
-        firstName: z.string().optional(),
-        lastName: z.string().optional(),
-        middleName: z.string().optional()
-      })
-      .optional(),
+    name: z.object({
+      firstName: z.string().optional(),
+      lastName: z.string().optional(),
+      middleName: z.string().optional()
+    }),
 
     dateOfBirth: z.string().optional(),
 
