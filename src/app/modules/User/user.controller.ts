@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import { UserService } from './user.service';
 import sendResponse from '../../../shared/response';
+import { UserService } from './user.service';
 
 const createStudent = async (req: Request, res: Response, next: NextFunction) => {
   try {

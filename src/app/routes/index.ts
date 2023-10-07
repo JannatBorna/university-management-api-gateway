@@ -1,5 +1,5 @@
 import express from 'express';
-import { userRoutes } from '../modules/User/user.routes';
+import { userRoutes } from '../modules/user/user.routes';
 import { academicSemesterRoutes } from '../modules/academicSemester/academicSemester.routes';
 import { academicFacultyRouters } from '../modules/academicFaculty/academicFaculty.router';
 import { buildingRoutes } from '../modules/building/building.router';
